@@ -1,0 +1,10 @@
+/.git/
+.gitignore
+
+app.js.example
+build_arm.sh
+docker-compose.yml
+Dockerfile*
+LICENSE
+README.md
+*.tar

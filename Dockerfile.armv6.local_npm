@@ -1,0 +1,28 @@
+########################################################################
+# Use this if you already have npm installed.
+# It's faster since it copies all the files to the image
+#
+### Usage
+#
+# Install node_modules for server
+# $ npm install
+#
+# Install node_modules for client and build static files
+# $ cd client && npm install && npm run build && cd ..
+# $ docker build -t gammu-frontend:armv6 -f Dockerfile.armv6.local_npm .
+#
+########################################################################
+
+FROM arm32v6/node:8.14.0-alpine
+RUN mkdir /app
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+
+ADD package.json /app/package.json
+ADD package-lock.json /app/package-lock.json
+ADD node_modules /app/node_modules
+ADD . /app
+
+ENV PORT=5000
+EXPOSE 5000
+CMD [ "npm", "start" ]

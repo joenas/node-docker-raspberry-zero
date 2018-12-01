@@ -1,0 +1,15 @@
+{
+  "name": "node-docker-raspberry-zero",
+  "version": "1.0.0",
+  "description": "Sample app for Node on a Raspberry Pi Zero/1 (armv6)",
+  "repository": "joenas/node-docker-raspberry-zero",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jon Neverland",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
