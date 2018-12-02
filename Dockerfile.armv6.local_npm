@@ -4,12 +4,11 @@
 #
 ### Usage
 #
-# Install node_modules for server
+# Install node_modules for your app
 # $ npm install
 #
-# Install node_modules for client and build static files
-# $ cd client && npm install && npm run build && cd ..
-# $ docker build -t gammu-frontend:armv6 -f Dockerfile.armv6.local_npm .
+# Build your image
+# $ docker build -t IMAGE_NAME -f Dockerfile.armv6.local_npm .
 #
 ########################################################################
 
